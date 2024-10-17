@@ -579,24 +579,6 @@ section {
 }
 
 
-.footer {
-  position: sticky;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: var(--white);
-  border-top: var(--border);
-  padding: 2.5rem 2rem;
-  text-align: center;
-  color: var(--black);
-  font-size: 2rem;
-  margin-top: 2rem;
-  z-index: 1000;
-}
-
-.footer span {
-  color: var(--main-color);
-}
 
 .playlist .row {
   display: flex;
@@ -643,8 +625,24 @@ section {
 }
 
 .playlist .row .col .thumb {
-  width: 100%;
+  position: relative;
   height: 30rem;
+}
+
+.playlist .row .col .thumb span {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border-radius: .5rem;
+  padding: .5rem 1.5rem;
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7)
+}
+
+.playlist .row .col .thumb img {
+  width: 100%;
+  height: 100%;
   border-radius: .5rem;
   object-fit: cover;
 
@@ -703,6 +701,83 @@ section {
 
 .playlist .row .column .details .date span {
   color: var(--light-color);
+}
+
+.video-container h1 {
+  padding-left: 2rem;
+}
+
+.video-container .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem 1rem;
+}
+
+
+.video-container .box-container .box {
+  position: relative;
+  border-radius: .5rem;
+  padding: 2rem;
+  background-color: var(--white);
+}
+
+.video-container .box-container .box img {
+  height: 20rem;
+  width: 100%;
+  border-radius: .5rem;
+  object-fit: cover;
+}
+
+.video-container .box-container .box i {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
+  height: 20rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: #fff;
+  border-radius: .5rem;
+  display: none;
+}
+
+.video-container .box-container .box:hover i {
+  display: flex;
+}
+
+.video-container .box-container .box h3 {
+  font-size: 2rem;
+  color: var(--black);
+  margin-top: 1rem;
+}
+
+.video-container .box-container .box:hover h3 {
+  color: var(--main-color);
+}
+
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--white);
+  border-top: var(--border);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  color: var(--black);
+  font-size: 2rem;
+  margin-top: 2rem;
+  z-index: 1000;
+}
+
+.footer span {
+  color: var(--main-color);
 }
 
 /* media queries*/
@@ -771,5 +846,9 @@ section {
 
   .about .row .image .img {
     height: auto;
+  }
+
+  .playlist .row .col .thumb {
+    height: 20rem;
   }
 }
