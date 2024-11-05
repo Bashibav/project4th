@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>login</title>
+    <title>watch videos</title>
     <!--font awesome cdn link-->
     <link
       rel="stylesheet"
@@ -85,9 +85,84 @@
 
     <!-- watch video section starts  -->
 
-    <section class="watch-vid"></section>
+    <section class="watch-vid">
+    <div class="vid-details">
+      <video src="images/vid-1.mp4" class="video" poster="images/post-1-1.png"controls autoplay></video>
+      <h3 class="title"> HTML tutorial-part 1</h3>
+      <div class="info">
+        <p>
+          <i class="fas fa-calendar"><span>21-12-2022</span></i>
+          <i class="fas fa-heart"><span>45 likes</span></i>
+        </p>
+      </div>
+      <div class="tutor">
+        <img src="images/pic-2.jpg" alt="">
+        <div>
+          <h3>toya raj</h3>
+          <span>Developer</span>
+        </div>
+      </div>
+      <form action="" method="post" class="flex">
+        <a href="playlist.html" class="inline-btn">view playlist</a>
+        <button class="submit"><i class="far fa-heart"><span>likes</span></i>
+        </button>
+      
+      </form>
+      <div class="description">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ut architecto quos quae eum itaque quia numquam magni facere vero laboriosam, iste repellat cum ipsa! Omnis fugit tempore incidunt molestias voluptas nulla quasi quam ex consequuntur iure maxime nihil, dolore iusto qui reprehenderit illo totam neque accusantium atque modi at.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At laborum perferendis delectus illo, itaque natus.
+        </p>
+
+      </div>
+    </div>
+  </section>
 
     <!-- watch video section ends -->
+
+
+    <!-- comments section starts  -->
+<section class="comments">
+  <h1 class="heading">Add a comment</h1>
+  <form action="" method="post" class="add-comments">
+    <textarea name="commen_box" required placeholder="write your comment....." maxlength="1000" cols="30" rows="10" ></textarea>
+    <input type="submit" value="add comment" name="add_comment" class="inline-btn">
+  </form>
+  <h1 class="heading">5 comments</h1>
+  <div class="sho-comments">
+    <div class="box">
+      <div class="user">
+        <img src="images/pic-1.jpg" alt="">
+        <div>
+         <h3>toya raj</h3>
+         <span>22-11-2021</span>
+       </div>
+      </div>
+      <p class="text">This is comment from toya raj....</p>
+      <form action="" method="post" class="flex-btn"> 
+        <button type="submit" name="edit_comment" class="inline-option-btn">Edit comments</button>
+        <button type="submit" name="delete_comment" class="inline-delete-btn">Delete comments</button>
+      </form>
+    </div>
+     <div class="box">
+          <div class="user">
+            <img src="images/pic-1.jpg" alt="">
+            <div>
+             <h3>shyam raj</h3>
+             <span>22-11-2021</span>
+            </div>
+       </div>
+        <p class="text">
+         Wow amazing video!
+         thanks for your source code!
+        </p>
+      </div>
+   </div>
+</section>
+
+    <!-- comments section ends  -->
+
+
 
     <!--footer section starts-->
     <footer class="footer">
